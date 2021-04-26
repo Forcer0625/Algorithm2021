@@ -1,5 +1,6 @@
 public class HW07_4108056036_4 extends Buy_Phone
 {
+    //fastest
     final static public int[][] work_array=new int[200000][2];
     final static public int[][] reverse_ans=new int[200000][2];
     @Override
