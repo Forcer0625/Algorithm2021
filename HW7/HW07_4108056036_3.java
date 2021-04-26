@@ -1,5 +1,6 @@
 public class HW07_4108056036_3 extends Buy_Phone
 {
+    //two one-dimension array
     final static public int[][] work_array=new int[200000][2];
     final static public int[] SCREEN_SIZE=new int[200000];
     final static public int[] PERFORMANCE=new int[200000];
