@@ -1,6 +1,5 @@
 public class HW07_4108056036_1 extends Buy_Phone
 {   
-    //quick sort
     //next:Mutiple Thread Ready
     final static public int[][] reverse_ans=new int[200000][2];
     @Override
