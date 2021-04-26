@@ -1,5 +1,6 @@
 public class HW07_4108056036_2 extends Buy_Phone
 {
+    //Original version by 41080560043
     @Override
     public int[][] bestPhone(int[][] inputArr){
         int len = inputArr.length;
