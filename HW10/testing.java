@@ -14,6 +14,7 @@ public class testing
             
             int[] a=shuffle(create(LENGTH));
             long start=System.nanoTime();
+            t.sorting(a);
             sum+=(System.nanoTime()-start);
             if(!check(a))   
             {
