@@ -4,7 +4,7 @@ class CountingSort
     public static void sort(int[] a, int start, int end)
     {
         
-        int[] count=new int[findMax(a)+1];
+        int[] count = new int[ findMax(a)+1 ];
         for (int i=0; i < end; ++i)
             count[ a[i] ]++;
 
