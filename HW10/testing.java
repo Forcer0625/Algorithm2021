@@ -2,32 +2,37 @@ import java.util.Random;
 public class testing
 {
     final static int RUNNING_TIME=100;
-    final static int LENGTH=200000;
+    final static int LENGTH=1000;
+    final static double dup_rate=0.9;       //rate of duplicate elements
+    final static double dupkey_chande=0.01;  //rate of different duplicate elements
     public static void main(String[] args)
     {
-        SortingArray t=new HW10_4108056036_3();
+        SortingArray t=new HW10_4108056036_1();
         long sum=0;
         for(int i=0;i<RUNNING_TIME;i++)
         {
+            
+            int[] a=shuffle(create(LENGTH));
             long start=System.nanoTime();
-            if(check(t.sorting(shuffle(create(LENGTH)))))
-            {
-                sum+=(System.nanoTime()-start);
-            }
-            else
+            sum+=(System.nanoTime()-start);
+            if(!check(a))   
             {
                 System.out.println(false);
                 break;
             }
 
         }
-        System.out.println(sum/RUNNING_TIME);
+        System.out.println("=> "+ (sum/RUNNING_TIME) );
     }
     public static int[] create(int length)
     {
         int[] a=new int[length];
+        int keep=0;
         for(int i=0;i<length;i++)
-            a[i]=i;
+            a[i]=
+            (Math.random() > dup_rate)
+            ?i
+            :(Math.random() > dupkey_chande)?keep:keep++;
         return a;
     }
     public static boolean check(int[] a)
@@ -57,4 +62,3 @@ public class testing
         a[j]=temp;
     }
 }
-
