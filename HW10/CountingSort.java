@@ -1,5 +1,6 @@
 class CountingSort
 {
+    //CountingSort.sort(a,0,a.length);
     public static void sort(int[] a, int start, int end)
     {
         
