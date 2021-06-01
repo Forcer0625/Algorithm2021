@@ -3,7 +3,7 @@ class QuickSort
     //QuickSort.sort(a,0,a.length-1);
     public static void sort(int[] a, int start, int end)    
     {
-        if(end - start < 2) return;
+        if(!(start < end)) return;
         int q = partition(a,start,end); 
         sort(a,start, q-1);
         sort(a,q+1, end);
