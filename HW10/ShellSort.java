@@ -6,7 +6,7 @@ class ShellSort
     {
         for (int gap : gap_seq)
         {
-            for (int i = start+end ; i < end  ; i ++ )
+            for (int i = start+gap ; i < end  ; i ++ )
             {
                 int temp = a[i];
                 int j;
